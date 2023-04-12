@@ -1,0 +1,174 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background: linear-gradient(to right, #14a172, #1d932b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 400px;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #5e3985;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgb(0, 0, 0, 6);
+    padding: 20px 30px;
+    position: relative;
+}
+h2{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+form input{
+    position: relative;
+    width: 100%;
+    outline: none;
+    font-size: 20px;
+    padding: 8px 0;
+    margin-top: 50px;
+    border: none;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+}
+form .name label{
+    position: absolute;
+    top: 110px;
+    left: 30px;
+    font-size: 20px;
+    color: #fff;
+    pointer-events: none;
+
+}
+form .pass label{
+    position: absolute;
+    top: 220px;
+    left: 30px;
+    font-size: 20px;
+    color: #fff;
+    pointer-events: none;
+}
+form .name input:focus ~ label{
+    top: 90px;
+    left: 30px;
+    color: #03e9f4;
+    font-size: 18px;
+    transition: .6s;
+}
+form .pass input:focus ~ label{
+    top: 200px;
+    left: 30px;
+    color: #03e9f4;
+    font-size: 18px;
+    transition: .6s;
+}
+.container form a{
+    position: relative;
+    display:inline-block;
+    padding: 15px 20px;
+    margin-top: 50px; 
+    font-size: 20px;
+    color: #03e9f4;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.container a:hover {
+    background: #03e9f4;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 30px #03e9f4,
+                0 0 60px #03e9f4,
+                0 0 80px #03e9f4,
+                0 0 100px #03e9f4;
+}
+.container a span {
+    position: absolute;
+    display: block;
+}
+
+a span:nth-child(1){
+    top: 0;
+    left:-100%;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation:anm1 1s linear infinite;
+}
+
+@keyframes anm1 {
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+} 
+
+a span:nth-child(2){
+    top: -100%;
+    right: 0;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation:anm2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+
+@keyframes anm2 {
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+} 
+
+
+a span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation:anm3 1s linear infinite;
+    animation-delay: 0.5s;
+}
+
+@keyframes anm3 {
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+       right: 100%;
+    }
+} 
+
+a span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation:anm4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+
+@keyframes anm4 {
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100%;
+    }
+} 
